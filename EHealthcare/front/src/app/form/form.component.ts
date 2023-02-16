@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent {
 
+export class FormComponent {
+  constructor () {}
+  age : number=0;
 }

@@ -1,0 +1,1 @@
+Mora da pobedimo! Mislim da je uputsvo jasno

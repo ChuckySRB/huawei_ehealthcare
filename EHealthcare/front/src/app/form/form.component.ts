@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { NumberValueAccessor } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ModelArtsStroke } from '../model/modelartsstroke';
+import { ModelArtsDiabetes } from '../model/modelartsdiabetes';
+import { ModelartsService } from '../modelarts.service';
 
 @Component({
   selector: 'app-form',
@@ -8,7 +11,7 @@ import { NumberValueAccessor } from '@angular/forms';
 })
 
 export class FormComponent {
-  constructor () {}
+  constructor (private router: Router, private modelarts: ModelartsService) {}
   age : number=0;
   sex : string;
   education : number=1;
@@ -22,7 +25,7 @@ export class FormComponent {
   bmi : number=0;
   glucose : number=0;
   smoker : string;
-  stroke : number=0;
+  stroke : number = 0;
   heartDisease : number=0;
   pysichalActiv : number=0;
   fruit : number=0;
@@ -34,5 +37,51 @@ export class FormComponent {
   mentalHealth : number=0;
   pysichalHealth : number=0;
   stairs : number=0;
+  
+  
+  submit(){
+    var diabetes: ModelArtsDiabetes
+    var stroke: ModelArtsStroke
+    diabetes.highBP = this.highBP
+    diabetes.highChol = this.highChol
+    diabetes.sex = this.sex == "Male" ? 1 : 0
+    diabetes.age = this.age
+    diabetes.cholCheck = this.cholTest
+    diabetes.bmi = this.bmi
+    diabetes.smoker = this.smoker == "yes" ? 1 : 0
+    diabetes.stroke = this.stroke
+    diabetes.hearthDisease = this.heartDisease
+    diabetes.physichalAchivity = this.pysichalActiv
+    diabetes.fruit = this.fruit
+    diabetes.veggies = this.vegetable
+    diabetes.hvyAlcoholConsump = this.drink
+    diabetes.anyHealthcare = this.healthcare
+    diabetes.noDocbcCost = this.noMoney
+    diabetes.genHlth = this.genHealth
+    diabetes.mentalHlth = this.mentalHealth
+    diabetes.physHlth = this.pysichalHealth
+    diabetes.diffWalk = this.stairs
+    diabetes.education = this.education
+    diabetes.income = this.income
+
+    stroke.gender = this.sex
+    stroke.age = this.age
+    stroke.hearth_disease = this.heartDisease
+    stroke.ever_married = this.marrige==1 ? "Yes" : "No"
+    stroke.work_type = this.work
+    stroke.residence = this.residence
+    stroke.bmi = this.bmi
+    stroke.smoking_status = this.smoker
+
+    this.modelarts.submitDiabetes(diabetes).subscribe(()=>{
+      alert("Diabetes!")
+    })
+
+    
+    this.modelarts.submitStroke(stroke).subscribe(()=>{
+      alert("Stroke!")
+    })
+
+  }
 
 }

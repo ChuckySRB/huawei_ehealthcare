@@ -1,11 +1,74 @@
 <p>home works!</p>
+<head>
+  <meta charset="UTF-8">
+  <title>eHealthCare</title>
+</head>
+
 <nav>
-    <ul>
-      <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-      <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
-      <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
-    </ul>
-  </nav>
-  <router-outlet></router-outlet>
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
+  </ul>
+</nav>
+
+
+<body>
+  <div class="about">
+    <p>Our app solves several pain points for individuals seeking medical care. One of the main pain points of traditional healthcare systems is the difficulty of accessing medical care, especially for individuals who live in remote areas or have limited mobility. Our app will solve this problem by providing a platform for individuals to connect with expert systems without having to physically visit a clinic. Scheduling appointments and waiting in long lines at clinics can be time-consuming and frustrating. With our app, individuals can communicate with our virtual  doctor and receive quick and effective medical advice, saving them valuable time and effort. By inputting their health history and symptoms into the app, individuals can receive a personalized diagnosis and treatment plan based on their unique medical needs. This is made possible through the use of Model Arts, which processes the information and determines the best course of action. The app will  use Huawei Cloud's Object Storage Service (OBS) to securely store all user health information. Only authorized personnel, such as the individual and their doctor, have access to this information, ensuring complete confidentiality. The app also maintains a database of doctor information, allowing individuals to find the right doctor for their needs. App takes a comprehensive approach to health and wellness by providing individuals with access to medical professionals, personalized health care, and secure health information storage. This helps individuals to better understand their health, identify potential health risks, and receive effective treatment to maintain optimal health.  In conclusion, this app will be a valuable solution for individuals seeking accessible, convenient, and effective medical care. By leveraging Huawei Cloud technologies, the app provides a unique and innovative approach to healthcare, 
+      solving pain points and improving the overall health and wellness of individuals.</p>
+  </div>
+
+  <div class="doctor">
+    <p>neki tekst smislicu</p>
+  </div>
+  
+  <div class="slideshow">
+    <div class="slike">
+      <div class="ime_slike">Img 1</div>
+      <img src="img1.jpg" style="width:100%">
+      <div class="text">Kompanija1</div>
+    </div>
+  
+    <div class="slike">
+      <div class="ime_slike">Img 2</div>
+      <img src="img2.jpg" style="width:100%">
+      <div class="text">Kompanija2</div>
+    </div>
+  
+    <div class="slike">
+      <div class="ime_slike">Img 3</div>
+      <img src="img3.jpg" style="width:100%">
+      <div class="text">Kompanija3</div>
+    </div>
+
+    <div class="slike">
+      <div class="ime_slike">Img 4</div>
+      <img src="img4.jpg" style="width:100%">
+      <div class="text">Kompanija4</div>
+    </div>
+
+    <div class="slike">
+      <div class="ime_slike">Img 5</div>
+      <img src="img5.jpg" style="width:100%">
+      <div class="text">Kompanija5</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+</body>
+
+
+<footer class="foot">
+  <p>eHalthCare App </p>
+  <div><p><a href="" class="nav_home">Home</a></p>></div>
+  <div><p><a href="" class="nav_about">About</a></p></div>
+  <div><p><a href="" class="nav_team">Our team</a></p></div>
+  <p> No Copyright - <a href="https://www.agorize.com/en/challenges/europe-huawei-developer-competition-2022?">HUAWEI Developer Competition Europe 2022</a></p>
+</footer>
+
+
+<router-outlet></router-outlet>
 
 <p>gas</p>

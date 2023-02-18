@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { DoctorComponent } from './doctor/doctor.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { DoctorComponent } from './doctor/doctor.component';
     LoginComponent,
     RegisterComponent,
     UserComponent,
-    DoctorComponent
+    DoctorComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

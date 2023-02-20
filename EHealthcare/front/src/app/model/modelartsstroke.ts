@@ -7,4 +7,6 @@ export class ModelArtsStroke{
     residence: string;
     bmi:number;
     smoking_status: string;
+    hypertension: number;
+    glucose: number;
 }

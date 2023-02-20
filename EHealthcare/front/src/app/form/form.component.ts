@@ -40,8 +40,8 @@ export class FormComponent {
   
   
   submit(){
-    var diabetes: ModelArtsDiabetes
-    var stroke: ModelArtsStroke
+    var diabetes: ModelArtsDiabetes = new ModelArtsDiabetes()
+    var stroke: ModelArtsStroke = new ModelArtsStroke()
     diabetes.highBP = this.highBP
     diabetes.highChol = this.highChol
     diabetes.sex = this.sex == "Male" ? 1 : 0
@@ -72,15 +72,26 @@ export class FormComponent {
     stroke.residence = this.residence
     stroke.bmi = this.bmi
     stroke.smoking_status = this.smoker
+    stroke.hypertension = this.highBP;
+    stroke.glucose = this.glucose;
 
     this.modelarts.submitDiabetes(diabetes).subscribe(()=>{
       alert("Diabetes!")
     })
 
     
-    this.modelarts.submitStroke(stroke).subscribe(()=>{
-      alert("Stroke!")
-    })
+    this.modelarts.submitStroke(stroke).subscribe((resp)=>{
+      //alert("Stroke!")
+      if(resp["result"] == 1)
+      {
+        alert("You are going to have a stroke, see a doctor immediately!");
+      }
+      else{
+        alert("You have low chances of having a stroke, everything seems normal");
+      }
+
+
+    });
 
   }
 

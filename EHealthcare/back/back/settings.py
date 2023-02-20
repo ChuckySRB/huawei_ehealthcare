@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ehealthcare.apps.EhealthcareConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -79,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'users',
         'USER': 'chucky',
-        'PASSWROD': 'YvG4e*Jhs$&G79',
+        'PASSWORD': 'YvG4e*Jhs$&G79',
         'HOST': '119.8.214.59',
         'PORT': 3306
     }
@@ -127,3 +128,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTH_USER_MODEL = 'ehealthcare.EUser'

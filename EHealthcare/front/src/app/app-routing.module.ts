@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DoctorComponent } from './doctor/doctor.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
       {path: "register", component: RegisterComponent},
   ]},
   {path: "patient", component: UserComponent},
+  {path: "doctor", component: DoctorComponent }
 ];
 
 @NgModule({

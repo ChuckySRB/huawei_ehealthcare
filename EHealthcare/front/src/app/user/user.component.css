@@ -1,11 +1,15 @@
-.column {
-    float: left;
-    width: 33.33%;
-  }
-  
+div {
+    column-count: 3;
+}
 
-.row:after {
-content: "";
-display: table;
-clear: both;
+.column {
+    border: 3px solid black;
+}
+
+.center {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
